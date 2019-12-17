@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+   
+    //将消息显示在网页上
+    function setMessageInnerHTML(innerHTML) {
+        document.getElementById('message').innerHTML += innerHTML + '<br/>';
+    }
+
+    //关闭连接
+    function closeWebSocket() {
+	document.getElementById('message').innerHTML = '';
+        setMessageInnerHTML('<img src = "static/img/微信图片_20191217170348.jpg">');
+    }
+
+    //发送消息
+    function send() {
+		setMessageInnerHTML('<img src = "static/img/微信图片_20191217165824.jpg">');
+      
+    }
+</script>
+<body>
+<h3>欢迎来到小胖猪的天地</h3><br/>
+<button onclick="send()">帅哥的头像</button>
+<button onclick="closeWebSocket()">猪头的照片</button>
+<div id="message"></div>
+</body>
+</html>
